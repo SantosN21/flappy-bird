@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Roboto:wght@400;700&display=swap");
+
+* {
+    font-family: "Nunito", sans-serif;
+    text-decoration: none;
+    color: #000800;
+    text-transform: capitalize;
+}
+
+body,html {
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    background-color: #71c5cf;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    background: #ebfcdc;
+    width: 100%;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background:#ebfcdc;
+    padding: 15px;
+}
+#board {
+    /* background-color: skyblue; */
+    background-image: url("images/flappybirdbg.png");
+    border-radius: 2%;
+    border: 5px solid #000800;
+}
