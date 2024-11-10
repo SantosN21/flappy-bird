@@ -1,3 +1,4 @@
+
 let board;
 let boardWidth = 360;
 let boardHeight = 640;
@@ -103,7 +104,7 @@ function update() {
     context.fillText(score, 5, 45);
 
     if (gameOver) {
-       context.fillText("GAME OVER", 5, 90);
+       document.getElementById("myModal").style.display = 'block';
     }
 }
 
@@ -143,12 +144,12 @@ function moveBird(e) {
         velocityY = -6;
     }
 
-    if (gameOver) {
-        bird.y = birdY;
-        pipeArray = [];
-        score = 0;
-        gameOver = false;
-    }
+    // if (gameOver) {
+    //     bird.y = birdY;
+    //     pipeArray = [];
+    //     score = 0;
+    //     gameOver = false;
+    // }
 }
 
 function detectCollision(a, b) {
@@ -157,3 +158,11 @@ function detectCollision(a, b) {
            a.y < b.y + b.height &&
            a.y + a.height > b.y;
 }
+
+
+// prevent scrolling when spacebar is clicked or clicked on the screen
+window.addEventListener('keydown', function(e) {
+    if(e.keyCode == 32 && e.target == document.body) {
+      e.preventDefault();
+    }
+  });

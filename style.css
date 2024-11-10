@@ -40,3 +40,26 @@ footer {
     border-radius: 2%;
     border: 5px solid #000800;
 }
+
+.modal {
+    display: none; /* Keep the modal hidden by default */
+    position: fixed;
+    z-index: 2; /* Ensure it appears above other content */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width of the viewport */
+    height: 100%; /* Full height of the viewport */
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+}
+
+.modal-content {
+    position: absolute; /* Position relative to the modal */
+    top: 50%; /* Place at the vertical center */
+    left: 50%; /* Place at the horizontal center */
+    transform: translate(-50%, -50%); /* Offset by half of its width/height to perfectly center it */
+    background-color: #ebfcdc;; /* Background color for the modal content */
+    padding: 20px;
+    width: 30%; /* Set the width of the modal content */
+    border-radius: 7px;
+    text-align: center; /* Center text inside the modal content */
+}
