@@ -63,3 +63,8 @@ footer {
     border-radius: 7px;
     text-align: center; /* Center text inside the modal content */
 }
+
+
+@media screen and (max-width: 469px) {footer {display: none;}}
+
+@media screen and (max-width: 469px) {header {display: none;}}
