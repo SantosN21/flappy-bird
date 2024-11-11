@@ -34,6 +34,7 @@ footer {
     background:#ebfcdc;
     padding: 15px;
 }
+
 #board {
     /* background-color: skyblue; */
     background-image: url("images/flappybirdbg.png");
@@ -58,7 +59,7 @@ footer {
     left: 50%; /* Place at the horizontal center */
     transform: translate(-50%, -50%); /* Offset by half of its width/height to perfectly center it */
     background-color: #ebfcdc;; /* Background color for the modal content */
-    padding: 20px;
+    padding: 20px;  
     width: 30%; /* Set the width of the modal content */
     border-radius: 7px;
     text-align: center; /* Center text inside the modal content */
@@ -68,3 +69,9 @@ footer {
 @media screen and (max-width: 469px) {footer {display: none;}}
 
 @media screen and (max-width: 469px) {header {display: none;}}
+
+@media (max-width: 469px) {
+   img[src="images/gameover.png"] {
+    width: 100px;
+   }
+}
