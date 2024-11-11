@@ -170,6 +170,22 @@ function detectCollision(a, b) {
   );
 }
 
+function darkMode() {
+    const board = document.getElementById("board");
+    const header = document.querySelector("header");
+    const footer = document.querySelector("footer");
+    const body = document.querySelector("body");
+    const modalContent = document.querySelector(".modal-content");
+    const buttonSix = document.querySelector("button-16");
+
+    board.classList.toggle("dark-mode");
+    header.classList.toggle("dark-mode");
+    footer.classList.toggle("dark-mode");
+    body.classList.toggle("dark-mode");
+    modalContent.classList.toggle("dark-mode");
+    buttonSix.style.backgroundColor = "black";
+}
+
 // prevent scrolling when spacebar is clicked or clicked on the screen
 window.addEventListener("keydown", function (e) {
   if (e.keyCode == 32 && e.target == document.body) {

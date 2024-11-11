@@ -7,7 +7,20 @@
     text-transform: capitalize;
 }
 
-body,html {
+*.unselectable {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+ 
+    /*
+      Introduced in Internet Explorer 10.
+      See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+    */
+    -ms-user-select: none;
+    user-select: none;
+ }
+
+body {
     font-family: 'Nunito', sans-serif;
     text-align: center;
     min-height: 100vh;
@@ -15,6 +28,14 @@ body,html {
     align-items: center; 
     justify-content: center;
     background-color: #71c5cf;
+}
+
+img{
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 header {
@@ -36,7 +57,7 @@ footer {
 }
 
 #board {
-    /* background-color: skyblue; */
+    background-color: skyblue;
     background-image: url("images/flappybirdbg.png");
     border-radius: 2%;
     border: 5px solid #000800;
@@ -58,13 +79,70 @@ footer {
     top: 50%; /* Place at the vertical center */
     left: 50%; /* Place at the horizontal center */
     transform: translate(-50%, -50%); /* Offset by half of its width/height to perfectly center it */
-    background-color: #ebfcdc;; /* Background color for the modal content */
+    background-color: #ebfcdc; /* Background color for the modal content */
     padding: 20px;  
     width: 30%; /* Set the width of the modal content */
     border-radius: 7px;
     text-align: center; /* Center text inside the modal content */
 }
 
+
+/* CSS */
+.button-16 {
+  background-color: #ebfcdc; 
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  color: #3c4043;
+  cursor: pointer;
+  font-family: arial,sans-serif;
+  font-size: 14px;
+  height: 36px;
+  line-height: 27px;
+  min-width: 54px;
+  padding: 0 16px;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: pre;
+}
+
+.button-16:hover {
+  border-color: #dadce0;
+  box-shadow: rgba(0, 0, 0, .1) 0 1px 1px;
+  color: #202124;
+}
+
+.button-16:focus {
+  border-color: #4285f4;
+  outline: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+body.dark-mode {
+    background-color: #008894;
+}
+
+#board.dark-mode {
+    background-color: #008894;
+    background-image: url("images/flappybirdbgnight.png");
+}
+
+/* Optional: Adjust header and footer for dark mode if desired */
+header.dark-mode, footer.dark-mode, .modal-content.dark-mode, .button-16.dark-mode {
+    background-color: #003f47; /* Darker background */
+    color: #ffffff; /* Lighter text color for better contrast */
+}
+
+button {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+}
 
 @media screen and (max-width: 469px) {footer {display: none;}}
 
